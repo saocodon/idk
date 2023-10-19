@@ -87,6 +87,11 @@ int main() {
 		int t;
 		cin >> t;
 		int Rl = customLB(L, R, t);
+
+		// shrinking search range
+		while (b[Rl])
+			Rl--;
+
 		//cerr << Rl << '\n';
 		int p = binary_search(L, Rl, t);
 		if (p == -1)
